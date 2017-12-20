@@ -2,16 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatButtonModule, MatMenuModule, MatCardModule, MatToolbarModule, MatIconModule} from '@angular/material';
+import { MatButtonModule, MatMenuModule, MatCardModule, MatToolbarModule, MatIconModule,
+   MatGridListModule, MatInputModule} from '@angular/material';
 import { NgModule } from '@angular/core';
+import { User} from '../models/user';
 
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +26,11 @@ import { AppComponent } from './app.component';
     MatMenuModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
